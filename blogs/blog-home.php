@@ -19,7 +19,7 @@
         $flag = 0;
         $usignnm = "Signed Out";
     }
-    $sql3 = "select * from blog order by date ASC";
+    $sql3 = "select * from blog WHERE `bstatus`='1' order by date ASC";
     $result3 = $conn->query($sql3) or die($conn->error);
 
 ?>
@@ -236,7 +236,6 @@
                     <!-- card sample -->
                     
                     <li class="blog_card flex-col">
-<<<<<<< HEAD
                         <div class="bname"><?php echo $myrow['btitle'] ?></div>
                         <div class="bdate"><?php echo $myrow['date']?></div>
                         <div class="bauth"><?php echo $myrow['uname'] ?></div>
@@ -348,25 +347,25 @@
       
         $("#publish_b").on("click",function(e){
             e.preventDefault();
-            var a_title = $("#a_title").val();
-            var a_desc = $("#a_desc").val();
-            var a_story = $("#a_story").val();
-            var a_tags = $("#a_tags").val();
+            var atcl_title = $("#a_title").val();
+            var atcl_desc = $("#a_desc").val();
+            var atcl_story = $("#a_story").val();
+            var atcl_tags = $("#a_tags").val();
 
-            if(a_title == ""){
+            if(atcl_title == ""){
                 alert("Article title is must");
             }
-            else if(a_desc == "") {
+            else if(atcl_desc == "") {
                 alert("Article description is must");
             }
-            else if(a_story == "") {
+            else if(atcl_story == "") {
                 alert("Story is must");
             }
             else{
                 $.ajax({
-                    url: "blog-addpost.php",
+                    url: "blog-home-addpost.php",
                     type: "POST",
-                    data: {a_title:a_title,a_desc:a_desc,a_story:a_story,a_tags:a_tags},
+                    data: {atcl_title:atcl_title,atcl_desc:atcl_desc,atcl_story:atcl_story,atcl_tags:atcl_tags},
                     success:function(data){
                         if(data == 1){
                             $("#b_form").trigger("reset");

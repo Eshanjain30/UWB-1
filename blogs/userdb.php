@@ -107,7 +107,7 @@
                         <p class="status">Status : <span><?php 
                         if($myrow['bstatus']==1 && $myrow['bviewed']==1){
                             echo "Approved" ;
-                        }elseif($myrow['bstatus']==1 && $myrow['bviewed']==0){
+                        }elseif($myrow['bstatus']==0 && $myrow['bviewed']==1){
                             echo "Rejected" ;
 
                         }else{

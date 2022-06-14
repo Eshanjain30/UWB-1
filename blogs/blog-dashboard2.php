@@ -260,7 +260,7 @@
         }
     if(isset($_POST['confirm'])){
         $comment = $_POST['rsn'];
-        $status = 1;
+        $status = 0;
         $viewed = 1 ;
         // $comment=$_POST['comment'];
         // $id=$_POST['id'];
