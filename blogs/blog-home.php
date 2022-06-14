@@ -9,8 +9,6 @@
             $flag = 1;  
             $usignnm = $_SESSION['usignnm'];
             $usignem = $_SESSION['usignem'];
-            $sql3 = "select * from blog order by date ASC";
-            $result3 = $conn->query($sql3) or die($conn->error);
         }
         else{
             $flag = 0;
@@ -21,6 +19,8 @@
         $flag = 0;
         $usignnm = "Signed Out";
     }
+    $sql3 = "select * from blog order by date ASC";
+    $result3 = $conn->query($sql3) or die($conn->error);
 
 ?>
 
