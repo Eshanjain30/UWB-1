@@ -20,7 +20,6 @@ gh_btn.addEventListener('focus', function(){
 })
 
 window.onload = function(){
-    console.log('done');
     setTimeout(() => {
         shine.style.animation = 'shine 1.2s ease-in-out 1 forwards';
         setTimeout(() => {
@@ -30,7 +29,7 @@ window.onload = function(){
 }
 
 function show_about(){
-    if(window.scrollY>(document.querySelector('.hero_top').offsetHeight - document.querySelector('.hero_top').offsetHeight/1.5)){
+    if(window.scrollY>(document.querySelector('.hero_top').offsetHeight - document.querySelector('.hero_top').offsetHeight/1.5)-100){
         document.querySelector('.abt1').style.transitionDuration = '0.6s';
         document.querySelectorAll('.abt_link').forEach(element => {
             element.style.transitionDuration = '0.7s';

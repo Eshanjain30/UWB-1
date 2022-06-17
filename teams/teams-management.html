@@ -7,7 +7,6 @@
     <title>UWB | Team-Management</title>
     <link rel="shortcut icon" type="image/x-icon" href="../common_images/favicon.png">
     <link rel="stylesheet" href="../common_styles/navbar.css">
-    <link rel="stylesheet" href="../common_styles/user-dashboard.css">
     <link rel="stylesheet" href="../common_styles/footer.css">
     <link rel="stylesheet" href="team-style.css">
 </head>
@@ -15,7 +14,7 @@
 
     <a href="#team-section" class="skip_nav">Skip navigation</a>
 
-        <!-- MAIN NAVIGATION -->
+    <!-- MAIN NAVIGATION -->
     <div class="preloader">
         <div class="pre_wrap">
             <div class="circle"></div>
@@ -33,14 +32,14 @@
             <nav class="menu_wide">
                 <ul class="flex-row">
                     <li><a href="../landing_page/index.html">Home</a></li>
-                    <li><a href="#about-section">About Us</a></li>
+                    <li><a href="#contact-section">About Us</a></li>
                     <li><a href="../blogs/blog-home.php">Blogs</a></li>
                     <li>
-                        <button id="team_drop"  class="active_page">Team</button>
+                        <button id="team_drop">Team</button>
                         <ul id="team_menu" class="team_sub flex-col inactive">
-                            <li><a href="../teams/teams-management.html" id="m_team">Management Team</a></li>
+                            <li><a href="teams-management.html" id="m_team">Management Team</a></li>
                             <span class="divider"></span>
-                            <li><a href="../teams/team-directors.html" id="brd">Board of Directors</a></li>
+                            <li><a href="team-directors.html" id="brd">Board of Directors</a></li>
                         </ul>
                     </li>
                     <li><a href="../contact_us/contact-us.html">Contact</a></li>
@@ -59,13 +58,13 @@
     <!-- SIDE NAVIGATION -->
     <nav class="menu_mini flex-col">
         <ul class="main_menu_min flex-col">
-            <li><a class='menu_links' href="../landing_page/index.html">Home</a></li>
-            <li><a class='menu_links' href="#about-section">About Us</a></li>
-            <li><a class='menu_links' href="../blogs/blog-home.php">Blogs</a></li>
-            <li><a class='menu_links active_page_min' href="../teams/teams-management.html">Management Team</a></li>
-            <li><a class='menu_links' href="../teams/team-directors.html">Board of Directors</a></li>
-            <li><a class='menu_links' href="../contact_us/contact-us.html">Contact</a></li>
-            <li><button class='menu_links' id="acc2">Account</button></li>
+            <li><a class="menu_links" href="../landing_page/index.html">Home</a></li>
+            <li><a class="menu_links" href="#contact-section">About Us</a></li>
+            <li><a class="menu_links" href="../blogs/blog-home.php">Blogs</a></li>
+            <li><a class="menu_links active_page_min" href="teams-management.html">Management Team</a></li>
+            <li><a class="menu_links" href="team-directors.html">Board of Directors</a></li>
+            <li><a class="menu_links" href="../contact_us/contact-us.html">Contact</a></li>
+            <li><a class="menu_links" href="#blank" id="acc2">Account</a></li>
         </ul>
     </nav>
 
@@ -74,83 +73,13 @@
         <div class="acc_bg flex-row">
             <div class="acc_wrapper flex-col" id="acc_wrapperid">
                 <div class="top flex-col" id="topid">
-                    <img src="../common_images/profile.svg" alt="profile-picture" class="avatar">
+                    <div class="avatar" id="avatarid"></div>
                     <div class="name" id="nameid">Signed out</div>
                 </div>
                 <div class="low flex-col" id="acc_links">
-                    <div id="mng"><button class="disabled2">Manage profile</button></div>
+                    <div id="mng"><a href="#blank" class="disabled">Manage profile</a></div>
                     <div id="auth_login"><a href="../admin_login/admin-login.html">Authorized signin</a></div>
                     <div id="usr_login"><a href="../user_signup/user-signup.html">User signin</a></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- USER DASHBOARD-MINI -->
-    <div class="db_wrap_par inactive2">
-        <div class="db_wrap flex-col">
-            <i class="fas fa-times"></i>
-
-            <div class="main_db flex-row">
-                <div class="profile">
-                    <img src="../common_images/profile.svg" alt="profile-picture" class="profile_picture">
-                    <div class="ed_avt inactive2"><i class="fas fa-camera"></i></div>
-                </div>
-                <div class="edit_avatars flex-col inactive2">
-                    <div class="ea_ttl">Select your Avatar</div>
-                    <div class="ea_icons flex-row">
-                        <img src="../common_images/avatars/av1.png" class="avatars" alt="avatar1">
-                        <img src="../common_images/avatars/av2.png" class="avatars" alt="avatar2">
-                        <img src="../common_images/avatars/av3.png" class="avatars" alt="avatar3">
-                        <img src="../common_images/avatars/av4.png" class="avatars" alt="avatar4">
-                        <img src="../common_images/avatars/av5.png" class="avatars" alt="avatar5">
-                        <img src="../common_images/avatars/av6.png" class="avatars" alt="avatar6">
-                    </div>
-                    <div class="ea_cncl">Cancel</div>
-                </div>
-                <div class="side_db flex-col">
-                    <div class="name">
-                        <span class="field">Name :</span>
-                        <span id='user_name' class="edit_value">-</span>
-                        <input type="text" class="edit_fields" id="un">
-                    </div>
-                    <div class="location">
-                        <span class="field">From :</span>
-                        <span id='user_from' class="edit_value">-</span>
-                        <input type="text" class="edit_fields" id="uf">
-                    </div>
-                </div>
-            </div>
-            <div class="extras flex-col">
-                <div class="bio">
-                    <span class="field">Bio :</span>
-                    <span id='user_bio' class="edit_value">-</span>
-                    <input type="text" class="edit_fields" id="ub" maxlength="70ch">
-                </div>
-                <div class="mail">
-                    <span class="field">Email :</span>
-                    <span id='user_mail' class="edit_value">-</span>
-                </div>
-                <div class="blogs">
-                    <span class="field">Blogs :</span>
-                    <div class="no_post_msg">No posts yet.</div>
-                    <div class="blogs_table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th width='100'>Title</th>
-                                    <th width='100'>Date</th>
-                                    <th width='100'>Status</th>
-                                    <th width='300'>Reason</th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
-                </div>
-                <div class="btns flex-row">
-                    <div class="edit"><i class="fas fa-pen"></i>Edit Profile</div>
-                    <div class="save">Save changes</div>
-                    <div class="cancel">Cancel</div>
                 </div>
             </div>
         </div>
@@ -161,9 +90,9 @@
         <div class="breadcrumb flex-row">
             <span class="home"><a href="../landing_page/index.html">Home</a></span>
             <span class="separator">/</span>
-            <span class="tm"><a href="teams-management.html">Teams</a></span>
+            <span class="blog"><a href="teams-management.html">Teams</a></span>
             <span class="separator">/</span>
-            <span class="td"><a href="teams-management.html">Management Team</a></span>
+            <span class="blog"><a href="teams-management.html">Management Team</a></span>
         </div>
     </div>
 
@@ -179,7 +108,7 @@
                     <div class="sc pr_card flex-col">
                         <div class="picture"></div>
                         <div class="name">shubham chak</div>
-                        <div class="designation">Founder & Chief Executive Officer</div>
+                        <div class="designation">Founder & Executive Director</div>
                         <div class="social">
                             <ul class="flex-row">
                                 <li><a href="https://www.facebook.com/profile.php?id=100004773318894"><i class="fab fa-facebook"></i></a></li>
@@ -194,7 +123,7 @@
                     <div class="bb pr_card flex-col">
                         <div class="picture"></div>
                         <div class="name">bhairavendra bhilwariya</div>
-                        <div class="designation">Founder & HR Director</div>
+                        <div class="designation">Founder</div>
                         <div class="social">
                             <ul class="flex-row">
                                 <li><a href="https://www.facebook.com/raj.bbilwariya"><i class="fab fa-facebook"></i></a></li>
@@ -205,18 +134,7 @@
                         </div>
                     </div>
 
-                    <div class="np pr_card flex-col">
-                        <div class="picture"></div>
-                        <div class="name">niti pradnya</div>
-                        <div class="designation">Co-founder & Marketing Director</div>
-                        <div class="social">
-                            <ul class="flex-row">
-                                <li><a href="https://twitter.com/niti_pradhnya"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="https://www.linkedin.com/in/nitipradhnya/"><i class="fab fa-linkedin"></i></a></li>
-                                <li><a href="mailto:niti.pradhnya9@gmail.com"><i class="fas fa-envelope"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
+                    
 
                 </div>
             </div>
@@ -226,24 +144,11 @@
                 <h2 class="sect_ttl">Directors</h2>
 
                 <div class="profiles flex-row">
-
-                    <div class="nt pr_card flex-col">
-                        <div class="picture"></div>
-                        <div class="name">neha t</div>
-                        <div class="designation">Health & Care Director</div>
-                        <div class="social">
-                            <ul class="flex-row">
-                                <li><a href="https://www.instagram.com/neha.munoth/?hl=en"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="https://www.linkedin.com/in/neha-a-666079119/"><i class="fab fa-linkedin"></i></a></li>
-                                <li><a href="mailto:nmunoth19@gmail.com"><i class="fas fa-envelope"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-
+                    
                     <div class="ms pr_card flex-col">
                         <div class="picture"></div>
-                        <div class="name">megha singh</div>
-                        <div class="designation">Public Relations & Business Development Director</div>
+                        <div class="name">Megha Singh</div>
+                        <div class="designation">Chief Operating Officer</div>
                         <div class="social">
                             <ul class="flex-row">
                                 <li><a href="https://www.instagram.com/megha_2511/?hl=en"><i class="fab fa-instagram"></i></a></li>
@@ -251,19 +156,75 @@
                                 <li><a href="mailto:Ashmasingh02@gmail.com"><i class="fas fa-envelope"></i></a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div> 
 
-                    <div class="aks pr_card flex-col">
+                    <div class="nt pr_card flex-col">
                         <div class="picture"></div>
-                        <div class="name">akshay satapathy</div>
-                        <div class="designation">IT Director</div>
+                        <div class="name">Priyanshu Kothari</div>
+                        <div class="designation">Public Relation & Business Development Director</div>
                         <div class="social">
                             <ul class="flex-row">
-                                <li><a href="https://www.instagram.com/_aksh_10/"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="mailto:akshay.satapathy97@gmail.com"><i class="fas fa-envelope"></i></a></li>
+                                <li><a href="https://instagram.com/priyanshukothari_"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://facebook.com/priyanshu.kothari.94"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="https://linkedin.com/in/kotharipriyanshu"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="https://twitter.com/psyphor_"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="mailto:kotharipriyanshu@gmail.com"><i class="fas fa-envelope"></i></a></li>
                             </ul>
                         </div>
                     </div>
+
+                    <div class="ss pr_card flex-col">
+                        <div class="picture"></div>
+                        <div class="name">Sarina Saadat</div>
+                        <div class="designation">Health & Care Director</div>
+                        <div class="social">
+                            <ul class="flex-row">
+                                <li><a href="http://instagram.com/sarinaa.saadat"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/sarinasaadat/"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="mailto:sarinastd.93@gmail.com"><i class="fas fa-envelope"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="ar pr_card flex-col">
+                        <div class="picture"></div>
+                        <div class="name">Aayushi Ruparel</div>
+                        <div class="designation">Health & Care Senior Advisor</div>
+                        
+                    </div>
+                    
+                    <div class="dc pr_card flex-col">
+                        <div class="picture"></div>
+                        <div class="name">Diksha Chandel</div>
+                        <div class="designation">Health & Care Asst. Director</div>
+                        
+                    </div>
+
+                    
+                    <div class="rc pr_card flex-col">
+                        <div class="picture"></div>
+                        <div class="name">Rohan</div>
+                        <div class="designation">Front-End Head</div>
+                        <div class="social">
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="sss pr_card flex-col">
+                        <div class="picture"></div>
+                        <div class="name">Shaswat</div>
+                        <div class="designation">Back-End Head</div>
+                        <div class="social">
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
 
                 </div>
 
@@ -276,37 +237,84 @@
                 <div class="profiles flex-col">
 
                     <div class="psychologists flex-row">
-                        <div class="ar pr_card flex-col">
+                        
+                        
+                        <div class="sr pr_card flex-col">
                             <div class="picture"></div>
-                            <div class="name">Aayushi Ruparel</div>
+                            <div class="name">Sumbul</div>
+                            <div class="designation">Psychologist</div>
+                        </div>
+                        
+                        <div class="cm pr_card flex-col">
+                            <div class="picture"></div>
+                            <div class="name">Chetna</div>
+                            <div class="designation">Psychologist</div>
+                        </div>
+                        
+                        <div class="vs pr_card flex-col">
+                            <div class="picture"></div>
+                            <div class="name">Varsha</div>
+                            <div class="designation">Psychologist</div>
+                        </div>
+                        
+                        <div class="asa pr_card flex-col">
+                            <div class="picture"></div>
+                            <div class="name">Anisha</div>
+                            <div class="designation">Psychologist</div>
+                        </div>
+                        
+                        <div class="sm pr_card flex-col">
+                            <div class="picture"></div>
+                            <div class="name">Shreya</div>
+                            <div class="designation">Psychologist</div>
+                        </div>
+                        
+                        <div class="iu pr_card flex-col">
+                            <div class="picture"></div>
+                            <div class="name">Ishwari</div>
+                            <div class="designation">Psychologist</div>
+                        </div>
+                        
+                        <div class="mt pr_card flex-col">
+                            <div class="picture"></div>
+                            <div class="name">Mahima</div>
+                            <div class="designation">Psychologist</div>
+                        </div>
+                        
+                    
+                        
+                        <div class="pc pr_card flex-col">
+                            <div class="picture"></div>
+                            <div class="name">Pratibha</div>
+                            <div class="designation">Psychologist</div>
+                        </div>
+                        
+                        <div class="ns pr_card flex-col">
+                            <div class="picture"></div>
+                            <div class="name">Niyati</div>
+                            <div class="designation">Psychologist</div>
+                        </div>
+                        
+                        <div class="at pr_card flex-col">
+                            <div class="picture"></div>
+                            <div class="name">Ayushi</div>
+                            <div class="designation">Psychologist</div>
+                        </div>
+                        
+                        <div class="aa pr_card flex-col">
+                            <div class="picture"></div>
+                            <div class="name">Anushree</div>
                             <div class="designation">Psychologist</div>
                         </div>
 
-                        <div class="as pr_card flex-col">
-                            <div class="picture"></div>
-                            <div class="name">Anmol Singh</div>
-                            <div class="designation">Psychologist</div>
-                        </div>
+                        
                     </div>
 
                     <div class="psy_trainees flex-row">
-                        <div class="sg pr_card flex-col">
-                            <div class="picture"></div>
-                            <div class="name">Shivika Goel</div>
-                            <div class="designation">Psychology Trainee</div>
-                        </div>
+                        
 
-                        <div class="st pr_card flex-col">
-                            <div class="picture"></div>
-                            <div class="name">Sanoob T</div>
-                            <div class="designation">Psychology Trainee</div>
-                        </div>
 
-                        <div class="at pr_card flex-col">
-                            <div class="picture"></div>
-                            <div class="name">Alby Thomas</div>
-                            <div class="designation">Psychology Trainee</div>
-                        </div>
+                      
                     </div>
                     
                 </div>
@@ -318,7 +326,7 @@
 
 
     <!-- FOOTER -->
-    <footer class="footer_main flex-col" id="about-section">
+    <footer class="footer_main flex-col" id="contact-section">
         <div class="site_footer flex-row">
             <div class="abt flex-col">
                 <h1 class="about_ttl">united well-being foundation</h1>
@@ -338,22 +346,21 @@
                 <ul class="flex-col">
                     <li><a href="../blogs/blog-home.php">Blogs</a></li>
                     <li><a href="teams-management.html">Team</a></li>
-                    <li><a href="">Privacy</a></li>
-                    <li><a href="">Policy</a></li>
-                    <li><a href="">Location</a></li>
-                    <li><a href="https://forms.gle/i87Qc7YetM1Xh5w26">Help</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Policy</a></li>
+                    <li><a href="#">Location</a></li>
+                    <li><a href="../get help/index.html">Help</a></li>
                 </ul>
             </div>
         </div>
         <div class="copyright flex-row">&copy; 2021 | All rights reserved to United Well-Being Foundation</div>
-        <button class="btt"><i class="fas fa-chevron-circle-up"></i></button>
+        <a href="#blank" class="btt"><i class="fas fa-chevron-circle-up"></i></a>
     </footer>
 
 </body>
 
 <script src="https://kit.fontawesome.com/7c7b8993a0.js" crossorigin="anonymous"></script>
 <script src="../common_scripts/navbar.js"></script>
-<script src="../common_scripts/dashboard.js"></script>
 <script src="teams1.js"></script>
 
 </html>

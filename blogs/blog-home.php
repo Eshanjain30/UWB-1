@@ -68,7 +68,7 @@
             <h1 class="logo_txt_min2 title">UWB FO.</h1>
             <nav class="menu_wide">
                 <ul class="flex-row">
-                    <li><a href="../landing_page/index.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="#about-section">About Us</a></li>
                     <li><a href="../blogs/blog-home.php" class="active_page">Blogs</a></li>
                     <li>
@@ -95,7 +95,7 @@
     <!-- SIDE NAVIGATION -->
     <nav class="menu_mini flex-col">
         <ul class="main_menu_min flex-col">
-            <li><a class='menu_links' href="../landing_page/index.html">Home</a></li>
+            <li><a class='menu_links' href="../index.html">Home</a></li>
             <li><a class='menu_links' href="#about-section">About Us</a></li>
             <li><a class='menu_links active_page_min' href="../blogs/blog-home.php">Blogs</a></li>
             <li><a class='menu_links' href="../teams/teams-management.html">Management Team</a></li>
@@ -201,7 +201,7 @@
     <!-- BREADCRUMB  -->
     <div class="breadcrumb_par flex-row">
         <div class="breadcrumb flex-row">
-            <span class="home"><a href="../landing_page/index.html">Home</a></span>
+            <span class="home"><a href="../index.html">Home</a></span>
             <span class="separator">/</span>
             <span class="blog"><a href="#">Blogs</a></span>
         </div>
@@ -218,7 +218,12 @@
                 <button class="share_btn">share your story<span class="shr_fx"></span></button>
                 
                 <!-- search options -->
-                <div class="blog_search"></div>
+                <div class="blog_search">
+                    <div class="search_par flex-row">
+                        <input type="text" name="search" id="searchbar" placeholder='Search by title, author'>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"/></svg>                    
+                    </div>
+                </div>
                 
                 <!-- no post -->
                 <div class="no_post_wrap flex-col">
@@ -227,7 +232,7 @@
                 </div>
                 
                 <!-- cards container -->
-                <ul class="blog_cards_container flex-row">
+                <ul class="blog_cards_container_hidden flex-row">
                 <?php 
                             while($myrow=mysqli_fetch_assoc($result3))
                             {
@@ -251,9 +256,12 @@
                     
                 </ul>
                 
+                <div id="no_results">No results found.</div>
+                <ul class="blog_cards_container flex-row">
+                </ul>
                 <!-- load more -->
 
-                <a id="load_more" href="blogs-all.html">load more</a>
+                <a id="load_more">load more</a>
 
                 <!-- add post -->
                 <div class="add_post_par flex-col" id='add_post'>
@@ -323,7 +331,7 @@
                     <li><a href="">Privacy</a></li>
                     <li><a href="">Policy</a></li>
                     <li><a href="">Location</a></li>
-                    <li><a href="https://forms.gle/i87Qc7YetM1Xh5w26">Help</a></li>
+                    <li><a href="../get help/index.html">Help</a></li>
                 </ul>
             </div>
         </div>

@@ -20,7 +20,7 @@
     --fixed-white : #fff;
     --valid-bg : #1aca60;
     --warn-bg : #f15850;
-    --prof-card-shdow : 0 0 10px rgba(68, 68, 68, 0.2);
+    --prof-card-shdow : 0 0 20px rgba(68, 68, 68, 0.2);
     --shdow : 0 0 10px rgba(68, 68, 68, 0.6);
     --usr-avt : url(../common_images/profile.svg);
     --bg-overlay : rgba(0,0,0,0.7);
@@ -394,7 +394,6 @@ a:hover,a:focus{
 /*--------------------------------------------------------CARD*/
 .acc_par{
     width: 100%;
-    background: var(--bg-overlay);
     backdrop-filter: saturate(0);
     position: fixed;
     inset: 0;

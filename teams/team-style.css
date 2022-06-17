@@ -81,13 +81,13 @@ body{
     justify-content: center;
     padding: 50px 0;
     gap: 30px;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
 }
 .profiles .pr_card{
     color: var(--text);
     align-items: center;
     background: var(--card);
-    box-shadow: var(--prof-card-shdow);
+    box-shadow: 0 0 transparent;
     padding: 25px 25px 22px 25px;
     /* width: 500px; */
     min-width: 350px;
@@ -99,7 +99,6 @@ body{
     height: 130px;
     width: 130px;
     border-radius: 50%;
-    filter: contrast(0.8);
     box-shadow: inset 0 0 15px rgba(68, 68, 68, 0.7);
 }
 .profiles .pr_card .name{
@@ -142,24 +141,42 @@ body{
 .psychologists, .psy_trainees{
     justify-content: center;
     gap: 30px;
+    flex-wrap: wrap;
 }
 .pr_card:hover{
-    transform: translateY(-3px);
+    box-shadow: var(--prof-card-shdow);
+    transform: scale(1.015);
 }
 
 
 .sc .picture{background: url(images/profile_pics/SC.jpg) no-repeat center center/cover;}
 .bb .picture{background: url(images/profile_pics/BB.jpg) no-repeat center center/cover;}
-.np .picture{background: url(images/profile_pics/NP.jpg) no-repeat center center/cover;}
-.nt .picture{background: url(images/profile_pics/NT.jpg) no-repeat center center/cover;}
 .ms .picture{background: url(images/profile_pics/MS.jpg) no-repeat center center/cover;}
-.aks .picture{background: url(images/profile_pics/AKS.jpg) no-repeat center center/cover;}
+.nt .picture{background: url(images/profile_pics/NT.jpg) no-repeat center center/cover;}
+.ss .picture{background: url(images/profile_pics/SS.jpg) no-repeat center center/cover;}
+.kf .picture{background: url(images/profile_pics/KF.jpg) no-repeat center center/cover;}
 .ar .picture{background: url(images/profile_pics/AR.jpg) no-repeat center center/cover;}
 .bs .picture{background: url(images/profile_pics/BS.jpg) no-repeat center center/cover;}
-.as .picture{background: url(images/profile_pics/AS.jpg) no-repeat center center/cover;}
 .sg .picture{background: url(images/profile_pics/SG.jpg) no-repeat center center/cover;}
-.st .picture{background: url(images/profile_pics/ST.jpg) no-repeat center center/cover;}
-.at .picture{background: url(images/profile_pics/AT.jpg) no-repeat center center/cover;}
+.ab .picture{background: url(images/profile_pics/AB.jpeg) no-repeat center center/cover;}
+.hs .picture{background: url(images/profile_pics/HS.jpeg) no-repeat center center/cover;}
+.cm .picture{background: url(images/profile_pics/CM.jpeg) no-repeat center center/cover;}
+.vs .picture{background: url(images/profile_pics/VS.jpeg) no-repeat center center/cover;}
+.asa .picture{background: url(images/profile_pics/ASA.jpeg) no-repeat center center/cover;}
+.sm .picture{background: url(images/profile_pics/SM.jpeg) no-repeat center center/cover;}
+.mt .picture{background: url(images/profile_pics/MT.jpeg) no-repeat center center/cover;}
+.dc .picture{background: url(images/profile_pics/DC.jpg) no-repeat center center/cover;}
+.pc .picture{background: url(images/profile_pics/PC.jpeg) no-repeat center center/cover;}
+.ns .picture{background: url(images/profile_pics/NS.jpeg) no-repeat center center/cover;}
+.pk .picture{background: url(images/profile_pics/PK.jpeg) no-repeat center center/cover;}
+.at .picture{background: url(images/profile_pics/AT.jpeg) no-repeat center center/cover;}
+.aa .picture{background: url(images/profile_pics/AA.jpeg) no-repeat center center/cover;}
+.sr .picture{background: url(images/profile_pics/SR.jpeg) no-repeat center center/cover;}
+.iu .picture{background: url(images/profile_pics/IU.jpg) no-repeat center center/cover;}
+.rc .picture{background: url(images/profile_pics/RC.jpeg) no-repeat center center/cover;}
+.ua .picture{background: url(images/profile_pics/UA.png) no-repeat center center/cover;}
+.sss .picture{background: url(images/profile_pics/SSS.jpg) no-repeat center center/cover;}
+
 
 
 
